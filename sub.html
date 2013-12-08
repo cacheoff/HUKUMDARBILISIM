@@ -14,10 +14,12 @@
                     i,
                     page,
                     dots;
-        window.onload = function () {
+        document.addEventListener("deviceready", function () {
             document.addEventListener("backbutton", function () {
                 document.location.href = "index.html";
             }, false);
+        }, false);
+        window.onload = function () {
             var scr = document.createElement("script");
             scr.async = true;
             scr.onload = function () {

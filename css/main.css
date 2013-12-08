@@ -25,7 +25,13 @@
     width: 100%;
     top: 5%;
     height: 80%;
+    text-align: center;
 }
+    #iconcontainer div
+    {
+        font: bolder 1.25em verdana;
+        line-height: 1.5em;
+    }
 #iconwrapper
 {
     margin: 0 auto;
@@ -34,9 +40,9 @@
 }
 .icon
 {
-    width: 40%;
-    height: 22%;
-    margin: .3em;
+    width: 45%;
+    height: 19%;
+    margin: .1em;
     display: inline-block;
     box-shadow: rgba(0,0,0,0.3) 0 0 1em;
 }
@@ -84,7 +90,7 @@
 {
     display: block;
     font-family: Verdana;
-    font-size: .70em;
+    font-size: .45em;
     text-align: center;
     padding-top: 1em;
 }
