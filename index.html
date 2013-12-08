@@ -5,7 +5,8 @@
     <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="application/javascript" src="phonegap.js"></script>
+    <script type="application/javascript" src="scripts/fastclick.js"></script>
 <link rel="stylesheet" type="text/css" href="css/main.css" />
     <title></title>
 </head>
@@ -24,5 +25,10 @@
             <a class="dev">Hükümdar Bilişim</a>
         </div>
     </div>
+    <script type="application/javascript">
+        window.addEventListener('load', function () {
+            new FastClick(document.body);
+        }, false);
+    </script>
 </body>
 </html>
