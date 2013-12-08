@@ -28,7 +28,8 @@
                     el = document.createElement('img');
                     el.className = 'loading';
                     el.src = slides.root + slides.images[page];
-                    el.style.width = "100%";
+                    if (window.screen.width < window.screen.height) el.style.width = "100%";
+                    else el.style.height = "100%";
                     el.onload = function () { this.className = ''; }
                     gallery.masterPages[i].appendChild(el);
 
@@ -78,8 +79,8 @@
                             el = gallery.masterPages[i].querySelector('img');
                             el.className = 'loading';
                             el.src = slides.root + slides.images[upcoming];
-                            el.style.width = "100%"
-
+                            if (window.screen.width < window.screen.height) el.style.width = "100%";
+                            else el.style.width = "100%";
                             el = gallery.masterPages[i].querySelector('span');
                             el.innerHTML = slides.desc;
                         }
