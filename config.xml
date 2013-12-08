@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <widget xmlns = "http://www.w3.org/ns/widgets"
+      xmlns:gap = "http://phonegap.com/ns/1.0"
+      id        = "teknar.tekfen"
+      version   = "1.0.1">
+
+  <name>TEKDEN ENDUSTRİ</name>
+
+  <description>Ürün Kataloğu</description>
+
+  <author href="http://www.teknarteknoloji.com" email="cacheoff@gmail.com">Ali AKAY</author>
+  
+  <gap:platform name="ios" />
+  <gap:platform name="android" />
+  
+  <icon src="icons/ios/icon.png" gap:platform="ios" width="57" height="57" />
+  <icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+  <icon src="icons/ios/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
+  <!-- retina iPad support: PhoneGap 2.5.0+ only -->
+  <icon src="icons/ios/icon-72_at_2x.png" gap:platform="ios" width="144" height="144" />
+
+  <icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+  <icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+  <icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+  <icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+  <icon src="icons/android/xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
+      
+  <gap:splash src="splash/ios/Default.png" gap:platform="ios" width="320" height="480" />
+  <gap:splash src="splash/ios/Default_at_2x.png" gap:platform="ios" width="640" height="960" />
+  <gap:splash src="splash/ios/Default_iphone5.png" gap:platform="ios" width="640" height="1136" />
+
+  <gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+  <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+  <gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+  <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+  <gap:splash src="splash/android/xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
+  
+  <access origin="*" /> 
+</widget>

@@ -1,0 +1,88 @@
+﻿body, html {
+    width: 100%;
+    height: 100%;
+    background: #e91700;
+}
+*
+{
+    position: relative;
+    z-index: auto;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+#logo
+{
+    margin-top: 3em;
+    width: 100%;
+    height: 8em;
+    background: url(../images/logo.gif) center center no-repeat #e91700;
+    box-shadow: rgba(0,0,0,0.8) 0 0 5em;
+}
+#iconcontainer
+{
+    width: 100%;
+    padding-top: 2em;
+}
+#iconwrapper
+{
+    margin: 0 auto;
+    text-align: center;
+}
+.icon
+{
+    width: 40%;
+    height: 9em;
+    margin: .5em;
+    display: inline-block;
+    box-shadow: rgba(0,0,0,0.3) 0 0 1em;
+}
+    .icon:hover
+    {
+        box-shadow: rgba(0,0,0,0.5) 0 0 1.5em;
+    }
+    .icon:active
+    {
+        box-shadow: rgba(0,0,0,0.1) 0 0 .5em inset;
+    }
+.icon1
+{
+    background: url(../images/icon1.png) #e8913d center center no-repeat;
+}
+.icon2
+{
+    background: url(../images/icon2.gif) #3da7e8 center center no-repeat;
+}
+.icon3
+{
+    background: url(../images/icon3.gif) #e83d56 center center no-repeat;
+}
+.icon4
+{
+    background: url(../images/icon4.gif) #78e83d center center no-repeat;
+}
+.icon5
+{
+    background: url(../images/icon5.gif) #e6e13e center center no-repeat;
+}
+.icon6
+{
+    background: url(../images/icon6.gif) #26caff center center no-repeat;
+}
+.icon7
+{
+    background: url(../images/icon7.gif) #616161 center center no-repeat;
+}
+.icon8
+{
+    background: url(../images/icon8.gif) #001fe2 center center no-repeat;
+}
+.dev
+{
+    display: block;
+    font-family: Verdana;
+    font-size: .70em;
+    text-align: center;
+    padding-top: 2em;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title></title>
+	<link href="css/slider.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="scripts/swipeview.js"></script>
+    <script type="text/javascript">
+        var gallery,
+                    el,
+                    i,
+                    page,
+                    dots;
+        window.onload = function () {
+            var scr = document.createElement("script");
+            scr.async = true;
+            scr.onload = function () {
+                document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+                gallery = new SwipeView('#wrapper', { numberOfPages: slides.images.length });
+
+                // Load initial data
+                for (i = 0; i < 3; i++) {
+                    page = i == 0 ? slides.images.length - 1 : i - 1;
+                    el = document.createElement('img');
+                    el.className = 'loading';
+                    el.src = slides.root + slides.images[page];
+                    el.style.height = "100%";
+                    el.onload = function () { this.className = ''; }
+                    gallery.masterPages[i].appendChild(el);
+
+                    el = document.createElement('span');
+                    el.innerHTML = slides.desc;
+                    gallery.masterPages[i].appendChild(el)
+                }
+
+                if (!slides || !slides.images || slides.images.length < 2) gallery.options.loop = false;
+                
+                // navbar
+                var li = document.createElement("li");
+                li.id = "prev";
+                li.innerHTML = "&laquo;";
+                li.onclick = function () {
+                    gallery.prev();
+                }
+                document.querySelector("#nav").appendChild(li);
+                for (var c = 0; c < slides.images.length; c++) {
+                    li = document.createElement("li");
+                    li.index = c;
+                    li.className = c === 0 ? "selected" : "";
+                    li.onclick = function () {
+                        gallery.goToPage(this.index);
+                    }
+                    document.querySelector("#nav").appendChild(li);
+                }
+                li = document.createElement("li");
+                li.id = "next";
+                li.innerHTML = "&raquo;";
+                li.onclick = function () {
+                    gallery.next();
+                }
+                document.querySelector("#nav").appendChild(li);
+                dots = document.querySelectorAll('#nav li');
+                
+                gallery.onFlip(function () {
+                    var el,
+                        upcoming,
+                        i;
+
+                    for (i = 0; i < 3; i++) {
+                        upcoming = gallery.masterPages[i].dataset.upcomingPageIndex;
+
+                        if (upcoming != gallery.masterPages[i].dataset.pageIndex) {
+                            el = gallery.masterPages[i].querySelector('img');
+                            el.className = 'loading';
+                            el.src = slides.root + slides.images[upcoming];
+                            el.style.height = "100%"
+
+                            el = gallery.masterPages[i].querySelector('span');
+                            el.innerHTML = slides.desc;
+                        }
+                    }
+
+                    document.querySelector('#nav .selected').className = '';
+                    dots[gallery.pageIndex + 1].className = 'selected';
+                });
+
+                gallery.onMoveOut(function () {
+                    gallery.masterPages[gallery.currentMasterPage].className = gallery.masterPages[gallery.currentMasterPage].className.replace(/(^|\s)swipeview-active(\s|$)/, '');
+                });
+
+                gallery.onMoveIn(function () {
+                    var className = gallery.masterPages[gallery.currentMasterPage].className;
+                    /(^|\s)swipeview-active(\s|$)/.test(className) || (gallery.masterPages[gallery.currentMasterPage].className = !className ? 'swipeview-active' : className + ' swipeview-active');
+                });
+            }
+            document.querySelector("head").appendChild(scr);
+            scr.src = "scripts/" + document.location.search.split("=")[1] + ".js";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <div id="navwrapper">
+        <ul id="navhome">
+            <li><a href="index.html">&#x2302;</a></li>
+        </ul>
+        <ul id="nav">
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+
+</script>
+</body>
+</html>
