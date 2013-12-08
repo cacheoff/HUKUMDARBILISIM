@@ -25,11 +25,13 @@
         </div>
     </div>
     <script type="application/javascript">
-        window.addEventListener('load', function () {
+        document.addEventListener('deviceready', function () {
             new FastClick(document.querySelector("#iconwrapper"));
             document.addEventListener("backbutton", function () {
                 navigator.app.exitApp();
             }, false);
+            var viewport = document.querySelectorAll("meta")[1];
+            viewport.content = "initial-scale=" + (1 / window.devicePixelRatio) + ", minimum-scale=" + (1 / window.devicePixelRatio)
         }, false);
     </script>
 </body>
