@@ -3,8 +3,6 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
     <script type="application/javascript" src="phonegap.js"></script>
     <script type="application/javascript" src="scripts/fastclick.js"></script>
 <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -27,7 +25,7 @@
     </div>
     <script type="application/javascript">
         window.addEventListener('load', function () {
-            new FastClick(document.body);
+            new FastClick(document.querySelector("#iconwrapper"));
         }, false);
     </script>
 </body>

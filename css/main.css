@@ -33,8 +33,8 @@
 .icon
 {
     width: 40%;
-    height: 9em;
-    margin: .5em;
+    height: 8.5em;
+    margin: .3em;
     display: inline-block;
     box-shadow: rgba(0,0,0,0.3) 0 0 1em;
 }
@@ -44,7 +44,7 @@
     }
     .icon:active
     {
-        box-shadow: rgba(0,0,0,0.1) 0 0 .5em inset;
+        box-shadow: rgba(0,0,0,0.5) 0 0 .1em;
     }
 .icon1
 {
@@ -84,5 +84,5 @@
     font-family: Verdana;
     font-size: .70em;
     text-align: center;
-    padding-top: 2em;
+    padding-top: 1em;
 }

@@ -3,8 +3,7 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
 	<title></title>
 	<link href="css/slider.css" rel="stylesheet" type="text/css">
     <script type="application/javascript" src="phonegap.js"></script>
@@ -17,7 +16,7 @@
                     page,
                     dots;
         window.onload = function () {
-            new FastClick(document.body);
+            new FastClick(document.querySelector("#navwrapper"));
             var scr = document.createElement("script");
             scr.async = true;
             scr.onload = function () {
