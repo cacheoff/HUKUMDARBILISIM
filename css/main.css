@@ -14,7 +14,7 @@
 }
 #logo
 {
-    margin-top: 1em;
+    top: 2%;
     width: 100%;
     height: 6.5em;
     background: url(../images/logo.gif) center center no-repeat #e91700;
@@ -23,17 +23,19 @@
 #iconcontainer
 {
     width: 100%;
-    padding-top: 1em;
+    top: 5%;
+    height: 80%;
 }
 #iconwrapper
 {
     margin: 0 auto;
     text-align: center;
+    height: 100%;
 }
 .icon
 {
     width: 40%;
-    height: 8.5em;
+    height: 22%;
     margin: .3em;
     display: inline-block;
     box-shadow: rgba(0,0,0,0.3) 0 0 1em;

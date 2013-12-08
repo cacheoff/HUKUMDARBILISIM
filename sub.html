@@ -15,6 +15,9 @@
                     page,
                     dots;
         window.onload = function () {
+            document.addEventListener("backbutton", function () {
+                document.location.href = "index.html";
+            }, false);
             var scr = document.createElement("script");
             scr.async = true;
             scr.onload = function () {
@@ -28,7 +31,7 @@
                     el = document.createElement('img');
                     el.className = 'loading';
                     el.src = slides.root + slides.images[page];
-                    if (window.screen.width < window.screen.height) el.style.width = "100%";
+                    if (window.screen.availWidth < window.screen.availHeight) el.style.width = "100%";
                     else el.style.height = "100%";
                     el.onload = function () { this.className = ''; }
                     gallery.masterPages[i].appendChild(el);
@@ -79,7 +82,7 @@
                             el = gallery.masterPages[i].querySelector('img');
                             el.className = 'loading';
                             el.src = slides.root + slides.images[upcoming];
-                            if (window.screen.width < window.screen.height) el.style.width = "100%";
+                            if (window.screen.availWidth < window.screen.availHeight) el.style.width = "100%";
                             else el.style.width = "100%";
                             el = gallery.masterPages[i].querySelector('span');
                             el.innerHTML = slides.desc;

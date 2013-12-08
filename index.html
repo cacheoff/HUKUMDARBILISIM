@@ -26,6 +26,9 @@
     <script type="application/javascript">
         window.addEventListener('load', function () {
             new FastClick(document.querySelector("#iconwrapper"));
+            document.addEventListener("backbutton", function () {
+                navigator.app.exitApp();
+            }, false);
         }, false);
     </script>
 </body>
