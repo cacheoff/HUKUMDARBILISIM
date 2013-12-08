@@ -14,13 +14,13 @@
         <div id="iconwrapper">
             <div>TEKFEN ENDÜSTRİ</div>    
             <div class="icon icon1" onclick="document.location.href='sub.html?lib=ll'"><div>Wiselite Serisi Led Lambalar</div></div>
-            <div class="icon icon2" href="document.location.href='sub.html?lib=tll'"><div>Tekfen Serisi Led Lambalar</div></div>
-            <div class="icon icon3" href="document.location.href='sub.html?lib=fl'"><div>Fluoresan Lambalar</div></div>
-            <div class="icon icon4" href="document.location.href='sub.html?lib=etl'"><div>Enerji Tasarruflu Lambalar</div></div>
-            <div class="icon icon5" href="document.location.href='sub.html?lib=hg'"><div>H.I.D. Gaz Deşarjlı Lambalar</div></div>
-            <div class="icon icon6" href="document.location.href='sub.html?lib=hl'"><div>Halojen Lambalar</div></div>
-            <div class="icon icon7" href="document.location.href='sub.html?lib=eb'"><div>Elektronik Balastlar, Ateşleyiciler, İzolasyon Trafoları</div></div>
-            <div class="icon icon8" href="document.location.href='sub.html?lib=i'"><div>İletişim</div></div>
+            <div class="icon icon2" onclick="document.location.href='sub.html?lib=tll'"><div>Tekfen Serisi Led Lambalar</div></div>
+            <div class="icon icon3" onclick="document.location.href='sub.html?lib=fl'"><div>Fluoresan Lambalar</div></div>
+            <div class="icon icon4" onclick="document.location.href='sub.html?lib=etl'"><div>Enerji Tasarruflu Lambalar</div></div>
+            <div class="icon icon5" onclick="document.location.href='sub.html?lib=hg'"><div>H.I.D. Gaz Deşarjlı Lambalar</div></div>
+            <div class="icon icon6" onclick="document.location.href='sub.html?lib=hl'"><div>Halojen Lambalar</div></div>
+            <div class="icon icon7" onclick="document.location.href='sub.html?lib=eb'"><div>Elektronik Balastlar, Ateşleyiciler, İzolasyon Trafoları</div></div>
+            <div class="icon icon8" onclick="document.location.href='sub.html?lib=i'"><div>İletişim</div></div>
             <div class="dev">Hükümdar Bilişim</div>
         </div>
     </div>
@@ -31,7 +31,8 @@
                 navigator.app.exitApp();
             }, false);
             var viewport = document.querySelectorAll("meta")[1];
-            viewport.content = "user-scalable=no, initial-scale=" + (1 / window.devicePixelRatio) + ", minimum-scale=" + (1 / window.devicePixelRatio)
+            viewport.content = "user-scalable=no, initial-scale=" + (1 / window.devicePixelRatio) + ", minimum-scale=" + (1 / window.devicePixelRatio);
+            navigator.splashscreen.hide();
         }, false);
     </script>
 </body>

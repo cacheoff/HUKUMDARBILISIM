@@ -14,12 +14,13 @@
                     i,
                     page,
                     dots;
+
         document.addEventListener("deviceready", function () {
             document.addEventListener("backbutton", function () {
                 document.location.href = "index.html";
             }, false);
-        }, false);
-        window.onload = function () {
+            var viewport = document.querySelectorAll("meta")[1];
+            viewport.content = "user-scalable=no, initial-scale=" + (1 / window.devicePixelRatio) + ", minimum-scale=" + (1 / window.devicePixelRatio);
             var scr = document.createElement("script");
             scr.async = true;
             scr.onload = function () {
@@ -44,7 +45,7 @@
                 }
 
                 if (!slides || !slides.images || slides.images.length < 2) gallery.options.loop = false;
-                
+
                 // navbar
                 var li = document.createElement("li");
                 li.id = "prev";
@@ -57,7 +58,7 @@
                     li = document.createElement("li");
                     li.index = c;
                     li.className = c === 0 ? "selected" : "";
-                    li.innerHTML = (li.index + 1)*1;
+                    li.innerHTML = (li.index + 1) * 1;
                     li.onclick = function () {
                         gallery.goToPage(this.index);
                     }
@@ -71,7 +72,7 @@
                 }
                 document.querySelector("#nav").appendChild(li);
                 dots = document.querySelectorAll('#nav li');
-                
+
                 gallery.onFlip(function () {
                     var el,
                         upcoming,
@@ -107,7 +108,7 @@
             }
             document.querySelector("head").appendChild(scr);
             scr.src = "scripts/" + document.location.search.split("=")[1] + ".js";
-        }
+        }, false);
     </script>
 </head>
 
