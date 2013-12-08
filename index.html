@@ -9,10 +9,11 @@
     <script type="text/javascript" src="phonegap.js"></script>
 <script type="text/javascript">
 		document.addEventListener("deviceready", onDeviceReady, false);
+		//window.addEventListener("load", onDeviceReady, false);
 		function onDeviceReady() {
-    // Now safe to use the PhoneGap API
-		    //document.location.href = "home.html";
 			document.write(window.screen.width);
+			alert("ok");
+			document.location.href = "home.html";
 		}
 </script>
 <body>
