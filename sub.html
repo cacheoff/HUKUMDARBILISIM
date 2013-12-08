@@ -51,6 +51,7 @@
                     li = document.createElement("li");
                     li.index = c;
                     li.className = c === 0 ? "selected" : "";
+                    li.innerHTML = (li.index + 1)*1;
                     li.onclick = function () {
                         gallery.goToPage(this.index);
                     }
@@ -96,7 +97,7 @@
                     var className = gallery.masterPages[gallery.currentMasterPage].className;
                     /(^|\s)swipeview-active(\s|$)/.test(className) || (gallery.masterPages[gallery.currentMasterPage].className = !className ? 'swipeview-active' : className + ' swipeview-active');
                 });
-                new FastClick(document.querySelector("#navwrapper"));
+                new FastClick(document.querySelectorAll("#navwrapper ul li"));
             }
             document.querySelector("head").appendChild(scr);
             scr.src = "scripts/" + document.location.search.split("=")[1] + ".js";
