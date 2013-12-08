@@ -34,6 +34,8 @@
   <gap:splash src="resources/sp680.png" gap:platform="android" gap:density="hdpi" />
   <gap:splash src="resources/sp680.png" gap:platform="android" gap:density="xhdpi" />
   <gap:splash src="resources/sp680.png" gap:platform="android" gap:density="xxhdpi" />
-  
+
+  <gap:plugin name="org.apache.cordova.device" version="0.2.3" />
+    
   <access origin="*" /> 
 </widget>
