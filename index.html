@@ -26,13 +26,13 @@
     </div>
     <script type="application/javascript">
         document.addEventListener('deviceready', function () {
+            var viewport = document.querySelectorAll("meta")[1];
+            viewport.content = "user-scalable=no, initial-scale=" + (1 / window.devicePixelRatio) + ", minimum-scale=" + (1 / window.devicePixelRatio);
+            navigator.splashscreen.hide();
             new FastClick(document.querySelector("#iconwrapper"));
             document.addEventListener("backbutton", function () {
                 navigator.app.exitApp();
             }, false);
-            var viewport = document.querySelectorAll("meta")[1];
-            viewport.content = "user-scalable=no, initial-scale=" + (1 / window.devicePixelRatio) + ", minimum-scale=" + (1 / window.devicePixelRatio);
-            navigator.splashscreen.hide();
         }, false);
     </script>
 </body>
