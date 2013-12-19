@@ -99,12 +99,13 @@
 .icon8
 {
     background-color: #001fe2 !important;
+	  font-size: .99em !important;
 }
 .dev
 {
     display: block;
     font-family: Verdana;
-    font-size: 1.55em !important;
+    font-size: .45em !important;
     text-align: center;
     padding-top: 1em;
 }
