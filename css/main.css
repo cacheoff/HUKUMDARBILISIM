@@ -61,7 +61,7 @@
         font-size: 15px !important;
         line-height: 17px !important;
         text-decoration: none;
-        text-shadow: rgba(0,0,0,.75) 0 0 .35em;
+        text-shadow: rgba(0,0,0,.75) 0 0 .90em;
         position: absolute;
         width: 100%;
         text-align: center;
@@ -99,7 +99,7 @@
 .icon8
 {
     background-color: #001fe2 !important;
-	  font-size: .10em !important;
+	 
 }
 .dev
 {
