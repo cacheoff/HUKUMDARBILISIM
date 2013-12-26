@@ -24,6 +24,9 @@
         back.addEventListener("click", function () {
             window.history.back();
         }, false);
+        back.addEventListener("tap", function () {
+            window.history.back();
+        }, false);
     }
     if (typeof (window.orientation) !== "undefined") {
         document.addEventListener('deviceready', _onLoad, false);
