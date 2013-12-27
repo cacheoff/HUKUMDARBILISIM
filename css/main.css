@@ -47,6 +47,7 @@
     box-shadow: rgba(0,0,0,0.3) 0 0 1em;
     text-decoration: none;
     background: url(../images/lamba.png) 50% 20% no-repeat;
+    cursor: pointer;
 }
     .icon:hover
     {
@@ -58,15 +59,15 @@
     }
     .icon div
     {
-        font-size: 30px !important;
-        line-height: 30px !important;
+        font-size: 32px !important;
+        line-height: 35px !important;
         text-decoration: none;
         text-shadow: rgba(0,0,0,.75) 0 0 .35em;
         position: absolute;
         width: 100%;
         text-align: center;
         bottom: 0;
-        padding-bottom: 1em;
+        padding-bottom: .5em;
     }
 .icon1
 {
@@ -108,7 +109,7 @@
 {
     display: block;
     font-family: Verdana;
-    font-size: .45em !important;
+    font-size: .55em !important;
     text-align: center;
     padding-top: 1em;
 }
