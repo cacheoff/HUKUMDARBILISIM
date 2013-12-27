@@ -47,6 +47,7 @@
     box-shadow: rgba(0,0,0,0.3) 0 0 1em;
     text-decoration: none;
     background: url(../images/lamba.png) 50% 20% no-repeat;
+    cursor: pointer;
 }
     .icon:hover
     {

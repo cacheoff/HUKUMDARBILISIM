@@ -41,12 +41,12 @@
                     el = document.createElement('span');
                     el.innerHTML = slides.desc;
                     gallery.masterPages[i].appendChild(el);
-                    //gallery.masterPages[i].addEventListener("tap", function () {
-                    //    document.location.href = "sub2.html?" + this.querySelector("img").src;
-                    //}, false);
-                    gallery.masterPages[i].addEventListener("click", function () {
+                    gallery.masterPages[i].addEventListener("tap", function () {
                         document.location.href = "sub2.html?" + this.querySelector("img").src;
                     }, false);
+                    //gallery.masterPages[i].addEventListener("click", function () {
+                    //    document.location.href = "sub2.html?" + this.querySelector("img").src;
+                    //}, false);
                 }
 
                 //if (!slides || !slides.images || slides.images.length < 2) 
@@ -110,7 +110,7 @@
                     var className = gallery.masterPages[gallery.currentMasterPage].className;
                     /(^|\s)swipeview-active(\s|$)/.test(className) || (gallery.masterPages[gallery.currentMasterPage].className = !className ? 'swipeview-active' : className + ' swipeview-active');
                 });
-                new FastClick(document.querySelectorAll("#navwrapper ul")[0]);
+                //new FastClick(document.querySelectorAll("#navwrapper ul")[0]);
             }
             document.querySelector("head").appendChild(scr);
             scr.src = "scripts/" + document.location.search.split("=")[1] + ".js";
