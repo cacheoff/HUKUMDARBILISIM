@@ -41,16 +41,14 @@
                     el = document.createElement('span');
                     el.innerHTML = slides.desc;
                     gallery.masterPages[i].appendChild(el);
-                    gallery.masterPages[i].addEventListener("tap", function () {
-                        document.location.href = "sub2.html?" + this.querySelector("img").src;
-                    }, false);
-                    gallery.masterPages[i].addEventListener("dblclick", function () {
+                    //gallery.masterPages[i].addEventListener("tap", function () {
+                    //    document.location.href = "sub2.html?" + this.querySelector("img").src;
+                    //}, false);
+                    gallery.masterPages[i].addEventListener("click", function () {
                         document.location.href = "sub2.html?" + this.querySelector("img").src;
                     }, false);
                 }
 
-                //if (!slides || !slides.images || slides.images.length < 2)
-                gallery.options.loop = false;
                 //if (!slides || !slides.images || slides.images.length < 2) 
                 gallery.options.loop = false;
 
