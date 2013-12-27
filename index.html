@@ -26,6 +26,9 @@
     </div>
     <script type="application/javascript">
         var _onLoad = function () {
+            var as = document.querySelectorAll("iconwraper a");
+            for (var i in as) as[i].addEventListener("click", function (e) { e.preventDefault();}, false);
+
             var viewport = document.querySelectorAll("meta")[1];
             viewport.content = "user-scalable=yes, initial-scale=" + (1 / window.devicePixelRatio) + ", minimum-scale=" + (1 / window.devicePixelRatio);
             if (typeof (window.orientation) !== "undefined") {
