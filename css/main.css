@@ -140,7 +140,7 @@
     .icon div
     {
         font-size: 18px !important;
-        line-height: 32px !important;
+        line-height: 24px !important;
     }
 }
 @media screen and (max-width:20em)
